@@ -1,6 +1,6 @@
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
+// const Manager = require('./lib/Manager');
+// const Engineer = require('./lib/Engineer');
+// const Intern = require('./lib/Intern');
 const inquirer = require('inquirer');
 const path = require('path');
 const fs = require('fs');
@@ -40,6 +40,7 @@ function promptUser() {
             message: 'Enter office number'
         }
     ]).then(function (answers) {
+        console.log("answers", answers);
         promptNewMember();
     })
 }
@@ -48,18 +49,19 @@ function promptNewMember() {
     return inquirer.prompt([{
         // Prompt for new team member
         type: 'confirm',
-        name: 'getMore',
+        name: 'choice',
         message: 'Would you like to enter a new team member?',
         default: true,
 
     }]).then(function (answers) {
         console.log(answers);
         //Only ask this info if the ans is YES 
-        if (answers.getMore) {
+        if (answers.choice) {
             //Prompt for TEAM  INFO
             promptNewMemberInfo();
         } else {
             //IF no exit the application 
+            console.log('Good Bye!');
             process.exit();
         }
     })
@@ -157,9 +159,18 @@ function promptNewMemberInfo() {
 async function init() {
     try {
         const data = await promptUser();
-        // const newData = await promptNewMember();
+        
+        
+
     } catch (err) {
         console.log(err);
     }
 }
+
 init();
+
+// const manager = new Manager(
+//     answers.managerName, 
+//     answers.managerId, 
+//     answers.managerEmail, 
+//     answers.officeNumber);

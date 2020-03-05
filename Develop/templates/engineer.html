@@ -1,13 +1,27 @@
-<div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/7ce090e9a1.js"></script>  
+</head>
+<body>
+    <div class="card employee-card text-white bg-info mb-3"  style="max-width: 25rem;" >
+        <div class="card-header">
+            <h1 class="card-title">{{ this.name}}</h1>
+            <h2 class="card-title"><i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span></i>Role</h2>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item" style="color:#111;">ID: {{ id }}</li>
+                <li class="list-group-item" style="color:#111;">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+                <li class="list-group-item" style="color:#111;">GitHub: <a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer">{{ github }}</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ id }}</li>
-            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer">{{ github }}</a></li>
-        </ul>
-    </div>
-</div>
+</body>
+</html>

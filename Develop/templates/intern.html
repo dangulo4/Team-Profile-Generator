@@ -1,13 +1,27 @@
-<div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://use.fontawesome.com/7ce090e9a1.js"></script>  
+</head>
+<body>
+    <div class="card employee-card text-white bg-info mb-3"  style="max-width: 25rem;" >
+        <div class="card-header">
+            <h1 class="card-title">{{ name }}</h1>
+            <h2 class="card-title"><i class="fa fa-user-circle fa-3x mx-4"></i>{{ role }}</h2>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item" style="color:#111;">ID: {{ Id }}</li>
+                <li class="list-group-item" style="color:#111;">Email: <a href="mailto:{{ email }}">{{email }}</a></li>
+                <li class="list-group-item" style="color:#111;">School: {{ school }}</li>
+            </ul>
+        </div>
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ id }}</li>
-            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">School: {{ school }}</li>
-        </ul>
-    </div>
-</div>
+</body>
+</html>
