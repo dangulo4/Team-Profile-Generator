@@ -19,4 +19,6 @@ class Employee {
       return "Employee";
     }
   }
+
+  // const employee = new Employee();
   module.exports = Employee;
