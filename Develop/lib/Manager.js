@@ -14,6 +14,4 @@ class Manager extends Employee {
   }
 }
 
-const manager = new Manager ();
-
 module.exports = Manager;
